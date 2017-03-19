@@ -3,12 +3,12 @@
     <header class="section section--header">
         <div class="top-nav">
           <div class="top-nav__left">
-            <h1 class="logo">Ribbeter</h1>
+            <router-link v-bind:to="{ path: '/' }"class="logo" tag="h1">Ribbeter</router-link>
           </div>
           <div class="top-nav__right">
             <a href="" class="top-nav__right__item">Ribbets</a>
             <a href="" class="top-nav__right__item">Frogs</a>
-            <a href="" class="top-nav__right__item">Login</a>
+            <router-link v-bind:to="{ path: '/login' }" class="top-nav__right__item">Login</router-link>
           </div>
         </div>
     </header>
@@ -24,6 +24,8 @@
 
 <script>
 export default {
+  props: ['Login'],
+
   data() {
     return {
     };
