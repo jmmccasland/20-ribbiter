@@ -19,51 +19,47 @@ $m-max-width: 60rem;
 // FONTS
 $font: 'Dosis', sans-serif;
 
-@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500');
 @import 'box-sizing';
 @import 'resets';
+@import 'layout';
+@import 'header';
 
-// GLOBAL LAYOUT
-.section {
-  padding: $m-gutter;
-}
+// Register Route Styles, trying to make them reusable
 
-.container {
-  max-width: $m-max-width;
+.card {
+  width: 100%;
+  max-width: 30rem;
   margin: 0 auto;
-}
 
 
-// HEADER
-.section--header {
-  background: $c-primary;
-  color: $c-pure-white;
-}
+  // Card Heading Styles
+  &__heading {
+    background: $c-primary;
+    color: $c-white;
+    padding: $m-gutter / 2;
+  }
 
-.top-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  // Clears margin so padding can be adusted properly
+  &__message {
+    margin: 0;
+  }
 
-  > * {
+  // Card Form Styles
+  &__form {
+    padding: $m-gutter / 2;
+    background: $c-pure-white;
+
+    &__input {
+      width: 100%;
+    }
+  }
+
+  .form-control {
     > * {
-      font-size: 1.25rem;
+
     }
   }
 
-  &__right {
-    &__item {
-      &:hover {
-        color: $c-secondary;
-      }
-    }
-    > * + * {
-      margin-left: $m-gutter;
-    }
-  }
-}
 
-.logo {
-  margin: 0;
-  font-weight: normal;
 }

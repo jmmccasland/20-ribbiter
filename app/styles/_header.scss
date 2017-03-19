@@ -1,0 +1,33 @@
+// HEADER
+.section--header {
+  background: $c-primary;
+  color: $c-pure-white;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > * {
+    > * {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__right {
+    &__item {
+      &:hover {
+        color: $c-secondary;
+      }
+    }
+    > * + * {
+      margin-left: $m-gutter;
+    }
+  }
+}
+
+.logo {
+  margin: 0;
+  font-weight: normal;
+}
