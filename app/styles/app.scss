@@ -3,4 +3,67 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+
+// COLORS
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+
+// MEASUREMENTS
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+// FONTS
+$font: 'Dosis', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,700');
 @import 'box-sizing';
+@import 'resets';
+
+// GLOBAL LAYOUT
+.section {
+  padding: $m-gutter;
+}
+
+.container {
+  max-width: $m-max-width;
+  margin: 0 auto;
+}
+
+
+// HEADER
+.section--header {
+  background: $c-primary;
+  color: $c-pure-white;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > * {
+    > * {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__right {
+    &__item {
+      &:hover {
+        color: $c-secondary;
+      }
+    }
+    > * + * {
+      margin-left: $m-gutter;
+    }
+  }
+}
+
+.logo {
+  margin: 0;
+  font-weight: normal;
+}
