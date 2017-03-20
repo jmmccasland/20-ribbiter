@@ -7,7 +7,7 @@
           </div>
           <div class="top-nav__right">
             <a href="" class="top-nav__right__item">Ribbets</a>
-            <a href="" class="top-nav__right__item">Frogs</a>
+            <router-link v-bind:to="{ path: '/users' }" class="top-nav__right__item">Frogs</router-link>
             <router-link v-bind:to="{ path: '/login' }" class="top-nav__right__item">Login</router-link>
           </div>
         </div>
