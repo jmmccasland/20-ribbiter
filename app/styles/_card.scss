@@ -1,7 +1,7 @@
 // /Login and /Register card styles
 .card {
   width: 100%;
-  max-width: 31.2rem;
+  // max-width: 31.2rem;
   margin: $m-gutter auto;
   box-shadow: $shadow-1;
   background: $c-pure-white;
@@ -34,7 +34,7 @@
 
     &__textarea {
       background: $c-white;
-      height: 8rem;
+      height: 6rem;
     }
   }
 
@@ -83,5 +83,9 @@
   &--primary {
     color: $c-white;
     background: $c-primary;
+  }
+
+  &--full-width {
+    width: 100%;
   }
 }

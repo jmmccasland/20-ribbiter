@@ -47,3 +47,59 @@ $font: 'Dosis', sans-serif;
 .page__title {
   border-bottom: 0.1rem solid $c-secondary;
 }
+
+// page section
+ .page {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   > * + * {
+     margin-left: $m-gutter * 2;
+   }
+ }
+
+ .page__section {
+   flex-grow: 1;
+
+  &--newribbet {
+    flex-basis: 35%;
+  }
+
+  &--ribbets {
+   flex-basis: calc(65% - #{$m-gutter} - #{$m-gutter});
+  }
+ }
+
+.post-list__loadmore {
+  padding: $m-gutter ($m-gutter / 2);
+}
+
+
+.post-list__item {
+  border-top: 0.1rem solid $c-secondary;
+  padding: $m-gutter ($m-gutter / 2);
+
+  &__username {
+    margin: 0;
+    color: $c-secondary;
+    text-decoration: underline;
+  }
+
+  &__message {
+
+  }
+}
+
+
+
+@media (max-width:700px) {
+  .page {
+    flex-direction: column;
+
+    > * + * {
+      margin-left: 0;
+    }
+  }
+}

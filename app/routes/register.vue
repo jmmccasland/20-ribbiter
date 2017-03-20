@@ -3,6 +3,7 @@
   <div class="container">
     <div class="alert" v-if="users.loading === 'error'">There was an error creating this user! :(</div>
 
+
     <div class="card">
       <div class="card__heading">
         <h2 class="card__message">Create an Account</h2>
