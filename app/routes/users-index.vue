@@ -31,7 +31,7 @@ export default {
 
   data() {
     return {
-      users: this.$select('ufsers'),
+      users: this.$select('users'),
     };
   },
 

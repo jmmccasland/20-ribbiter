@@ -36,7 +36,7 @@
                 <button class="button button--full-width button--secondary">Load New Ribbets</button>
               </div>
 
-              <div class="post-list__item">
+              <div  class="post-list__item">
                 <h3 class="post-list__item__username">$cera</h3>
                 <p class="post-list__item__message">This is a ribbet!</p>
               </div>
@@ -60,10 +60,20 @@
 </template>
 
 <script>
+import store from '../store';
+import postResource from '../resources/post';
+const findAll = postResource.actionCreators.findAll;
 export default {
+  name: 'Ribbets-Index',
+
   data() {
     return {
+      posts: this.$select('posts'),
     };
+  },
+
+  created() {
+    store.dispatch(findAll());
   },
 
   methods: {
