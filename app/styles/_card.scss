@@ -1,0 +1,81 @@
+// /Login and /Register card styles
+.card {
+  width: 100%;
+  max-width: 31.2rem;
+  margin: $m-gutter auto;
+  box-shadow: $shadow-1;
+
+  // Card Heading Styles
+  &__heading {
+    background: $c-primary;
+    color: $c-white;
+    padding: $m-gutter / 2;
+  }
+
+  // Clears margin so padding can be adusted properly
+  &__message {
+    margin: 0;
+  }
+
+  // Card Form Styles
+  &__form {
+    background: $c-pure-white;
+
+    &__input {
+      width: 100%;
+      border: 0;
+      border-bottom: 0.2rem solid $c-secondary;
+      font-size: 0.9rem;
+      font-weight: 400;
+      padding: 0.5rem 0.1rem 0.1rem;
+      outline: none;
+    }
+  }
+
+  .form-control {
+    > * {
+      margin-bottom: $m-gutter;
+    }
+
+    label {
+      font-weight: 500;
+      margin-bottom: $m-gutter;
+    }
+  }
+}
+
+.form-inputs {
+  padding: $m-gutter / 2;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  padding: $m-gutter ($m-gutter / 2);
+  border-top: 0.1rem solid $c-secondary;
+}
+
+.button {
+  border: 0;
+  padding: ($m-gutter / 2) $m-gutter;
+  font-family: $font;
+  font-weight: 500;
+  font-size: 1rem;
+  outline: none;
+  cursor: pointer;
+
+  &:active {
+    position: relative;
+    top: 2px;
+  }
+
+  &--secondary {
+    color: $c-secondary;
+    background: $c-white;
+  }
+
+  &--primary {
+    color: $c-white;
+    background: $c-primary;
+  }
+}

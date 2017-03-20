@@ -20,13 +20,13 @@
 
           <div class="form-control">
             <label for="Password">Password</label>
-            <input name="password" placeholder="Password" class="card__form__input" type="text">
+            <input name="password" placeholder="Password" class="card__form__input" type="password">
           </div>
 
         </div>
 
         <div class="form-buttons">
-          <router-link v-bind:to="{ path: '/login' }" type="button" class="button button--login button--secondary">Login</router-link>
+          <router-link v-bind:to="{ path: '/login' }" type="button" class="button button--login button--secondary" tag="button">Login</router-link>
           <button type="submit" class="button button--signup button--primary">Sign Up</button>
         </div>
       </form>

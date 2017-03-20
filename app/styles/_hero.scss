@@ -1,0 +1,34 @@
+// Hero styles for the /index route
+.hero {
+  display: flex;
+  align-items: center;
+  background: $c-pure-white;
+  margin: $m-gutter 0;
+  padding: $m-gutter;
+  border: 0.2rem solid $c-secondary;
+
+  &__center {
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: right;
+  }
+
+  &__message {
+    font-size: 3rem;
+    margin: 0 0 ($m-gutter / 2);
+  }
+
+  &-buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &__img {
+    position: absolute;
+    width: 2.5rem;
+    right: $m-gutter;
+    bottom: $m-gutter;
+  }
+}

@@ -12,16 +12,16 @@
               <label for="email">Email</label>
               <input name="email" placeholder="Email" class="card__form__input" type="text">
             </div>
-
             <div class="form-control">
               <label for="Password">Password</label>
-              <input name="password" placeholder="Password" class="card__form__input" type="text">
+              <input name="password" placeholder="Password" type="password" class="card__form__input">
             </div>
-
           </div>
 
           <div class="form-buttons">
-            <router-link v-bind:to="{ path: '/register' }" type="button" class="button button--login button--secondary">Register</router-link>
+            <router-link v-bind:to="{ path: '/register' }" type="button" tag="button" class="button button--login button--secondary">Register</router-link>
+
+            <!-- submit form and log user into site -->
             <button class="button button--signup button--primary">Login</button>
           </div>
         </form>
