@@ -30,6 +30,17 @@ $font: 'Dosis', sans-serif;
 @import 'card'; // /Login and /Register card styles
 @import 'user-card'; // User card styles
 
+// error styles
+.alert {
+  width: 100%;
+  max-width: 31.2rem;
+  margin: 0 auto;
+  padding: $m-gutter;
+  border: 0.2rem solid $c-secondary;
+  color: $c-secondary;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
 
 // page styles
 .page__title {
