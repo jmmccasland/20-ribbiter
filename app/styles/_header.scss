@@ -1,0 +1,32 @@
+// HEADER
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: $c-primary;
+  color: $c-pure-white;
+  padding: ($m-gutter / 2) ($m-gutter / 1.25);
+
+  > * {
+    > * {
+      font-size: 1.25rem;
+    }
+  }
+
+  &__right {
+    &__item {
+      &:hover {
+        color: $c-secondary;
+      }
+    }
+    > * + * {
+      margin-left: $m-gutter;
+    }
+  }
+}
+
+.logo {
+  margin: 0;
+  font-weight: normal;
+  cursor: pointer;
+}

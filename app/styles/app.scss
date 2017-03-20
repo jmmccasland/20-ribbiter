@@ -3,4 +3,102 @@
 
 // $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 // @import 'font-awesome';
+
+// COLORS
+$c-primary: #96ca2d;
+$c-light: #b5e655;
+$c-secondary: #4bb5c1;
+$c-secondary-light: #7FC6BC;
+$c-white: #edf7f2;
+$c-pure-white: #fff;
+
+// Shadows
+$shadow-1: 0.2rem 0.4rem 0.4rem rgba(#000, 0.4);
+
+// MEASUREMENTS
+$m-gutter: 1rem;
+$m-max-width: 60rem;
+
+// FONTS
+$font: 'Dosis', sans-serif;
+
+@import url('https://fonts.googleapis.com/css?family=Dosis:400,500');
 @import 'box-sizing';
+@import 'resets'; // Minor resets
+@import 'layout'; // Sections and containers to be resused across multiples sections and pages
+@import 'header'; // Header styles to be used across entire site
+@import 'hero'; // Hero styles for the /index route
+@import 'card'; // /Login and /Register card styles
+@import 'user-card'; // User card styles
+
+// error styles
+.alert {
+  width: 100%;
+  margin: 0 auto;
+  padding: $m-gutter;
+  border: 0.2rem solid $c-secondary;
+  color: $c-secondary;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+// page styles
+.page__title {
+  border-bottom: 0.1rem solid $c-secondary;
+}
+
+// page section
+ .page {
+   width: 100%;
+   display: flex;
+   justify-content: space-between;
+   flex-wrap: wrap;
+
+   > * + * {
+     margin-left: $m-gutter * 2;
+   }
+ }
+
+ .page__section {
+   flex-grow: 1;
+
+  &--newribbet {
+    flex-basis: 35%;
+  }
+
+  &--ribbets {
+   flex-basis: calc(65% - #{$m-gutter} - #{$m-gutter});
+  }
+ }
+
+.post-list__loadmore {
+  padding: $m-gutter ($m-gutter / 2);
+}
+
+
+.post-list__item {
+  border-top: 0.1rem solid $c-secondary;
+  padding: $m-gutter ($m-gutter / 2);
+
+  &__username {
+    margin: 0;
+    color: $c-secondary;
+    text-decoration: underline;
+  }
+
+  &__message {
+
+  }
+}
+
+
+
+@media (max-width:700px) {
+  .page {
+    flex-direction: column;
+
+    > * + * {
+      margin-left: 0;
+    }
+  }
+}

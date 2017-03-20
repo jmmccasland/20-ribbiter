@@ -1,0 +1,25 @@
+// User Card Styles
+.user-card {
+  display: flex;
+  padding: $m-gutter ($m-gutter / 2);
+  background: $c-pure-white;
+  box-shadow: $shadow-1;
+
+  > * + * {
+    padding-left: $m-gutter;
+  }
+
+  &__img {
+    max-width: 6rem;
+  }
+
+  &__name {
+    margin: 0;
+  }
+
+  &__tag {
+    margin: 0;
+    color: $c-secondary;
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,24 @@
+// GLOBAL LAYOUT
+.section {
+  padding: $m-gutter;
+}
+
+.container {
+  max-width: $m-max-width;
+  margin: 0 auto;
+}
+
+
+
+// Grid Layout for Users
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -$m-gutter;
+
+  &__item {
+    margin: $m-gutter;
+    flex-basis: calc(100% / 3 - #{$m-gutter} - #{$m-gutter});
+    flex-grow: 1;
+  }
+}
