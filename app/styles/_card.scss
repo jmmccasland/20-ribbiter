@@ -4,6 +4,7 @@
   max-width: 31.2rem;
   margin: $m-gutter auto;
   box-shadow: $shadow-1;
+  background: $c-pure-white;
 
   // Card Heading Styles
   &__heading {
@@ -19,7 +20,7 @@
 
   // Card Form Styles
   &__form {
-    background: $c-pure-white;
+    // background: $c-pure-white;
 
     &__input {
       width: 100%;
@@ -29,6 +30,11 @@
       font-weight: 400;
       padding: 0.5rem 0.1rem 0.1rem;
       outline: none;
+    }
+
+    &__textarea {
+      background: $c-white;
+      height: 8rem;
     }
   }
 
