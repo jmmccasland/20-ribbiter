@@ -6,15 +6,15 @@
           <h2 class="card__message">Login</h2>
         </div>
 
-        <form class="card__form">
+        <form v-on:submit.prevent="" class="card__form">
           <div class="form-inputs">
             <div class="form-control">
               <label for="email">Email</label>
-              <input name="email" placeholder="Email" class="card__form__input" type="text">
+              <input v-model="formValues.email" name="email" placeholder="Email" class="card__form__input" type="text">
             </div>
             <div class="form-control">
               <label for="Password">Password</label>
-              <input name="password" placeholder="Password" type="password" class="card__form__input">
+              <input v-model="formValues.password" name="password" placeholder="Password" type="password" class="card__form__input">
             </div>
           </div>
 
@@ -34,11 +34,14 @@
 export default {
   data() {
     return {
+      formValues: {
+        email: '',
+        password: '',
+      }
     };
   },
 
   methods: {
-
   },
 };
 </script>

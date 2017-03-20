@@ -3,7 +3,7 @@
     <header>
         <div class="top-nav">
           <div class="top-nav__left">
-            <router-link v-bind:to="{ path: '/' }"class="logo" tag="h1">Ribbeter</router-link>
+            <router-link v-bind:to="{ path: '/' }" class="logo" tag="h1">Ribbeter</router-link>
           </div>
           <div class="top-nav__right">
             <a href="" class="top-nav__right__item">Ribbets</a>
@@ -20,8 +20,6 @@
 
 <script>
 export default {
-  props: ['Login'],
-
   data() {
     return {
     };

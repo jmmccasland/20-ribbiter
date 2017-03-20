@@ -28,3 +28,10 @@ $font: 'Dosis', sans-serif;
 @import 'header'; // Header styles to be used across entire site
 @import 'hero'; // Hero styles for the /index route
 @import 'card'; // /Login and /Register card styles
+
+
+// User Card Styles
+.user-card {
+  padding: $m-gutter ($m-gutter / 2);
+  background: $c-pure-white;
+}
