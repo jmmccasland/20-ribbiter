@@ -12,7 +12,7 @@ $c-white: #edf7f2;
 $c-pure-white: #fff;
 
 // Shadows
-$shadow-1: 0.2rem 0.4rem 0.4rem rgba(#000, 0.3);
+$shadow-1: 0.2rem 0.4rem 0.4rem rgba(#000, 0.4);
 
 // MEASUREMENTS
 $m-gutter: 1rem;
@@ -27,11 +27,60 @@ $font: 'Dosis', sans-serif;
 @import 'layout';
 @import 'header';
 
-// Register Route Styles, trying to make them reusable
+.hero {
+  display: flex;
+  align-items: center;
+  background: $c-pure-white;
+  margin: $m-gutter 0;
+  padding: $m-gutter;
+  border: 0.2rem solid $c-secondary;
 
+  &__center {
+    font-size: 1.25rem;
+    width: 100%;
+    text-align: right;
+  }
+
+  &__message {
+    font-size: 3rem;
+    margin: 0 0 ($m-gutter / 2);
+  }
+
+  &-buttons{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    text-align: center;
+  }
+
+  &__img {
+    position: absolute;
+    width: 2.5rem;
+    right: $m-gutter;
+    bottom: $m-gutter;
+  }
+
+}
+
+// @media (max-width: 550px) {
+//   .hero {
+//     flex-direction: column;
+//
+//     &__left {
+//       text-align: center;
+//       margin-bottom: $m-gutter;
+//     }
+//
+//     &__right {
+//       flex-grow: 1;
+//     }
+//   }
+// }
+
+// Card Styles Across /register and /login
 .card {
   width: 100%;
-  max-width: 35rem;
+  max-width: 31.2rem;
   margin: $m-gutter auto;
   box-shadow: $shadow-1;
 

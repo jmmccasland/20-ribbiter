@@ -1,6 +1,6 @@
 <template lang="html">
   <div class="app">
-    <header class="section section--header">
+    <header>
         <div class="top-nav">
           <div class="top-nav__left">
             <router-link v-bind:to="{ path: '/' }"class="logo" tag="h1">Ribbeter</router-link>

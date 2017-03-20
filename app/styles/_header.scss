@@ -1,13 +1,11 @@
 // HEADER
-.section--header {
-  background: $c-primary;
-  color: $c-pure-white;
-}
-
 .top-nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: $c-primary;
+  color: $c-pure-white;
+  padding: ($m-gutter / 2) ($m-gutter / 1.25);
 
   > * {
     > * {
