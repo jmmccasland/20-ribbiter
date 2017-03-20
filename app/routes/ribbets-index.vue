@@ -13,12 +13,12 @@
                 <div class="form-inputs">
                   <div class="form-control">
                     <label for="ribbet">What's going on?</label>
-                    <textarea name="ribbet" class="card__form__input card__form__textarea" type="text"></textarea>
+                    <textarea v-model="formValues.body" name="ribbet" class="card__form__input card__form__textarea" type="text"></textarea>
                   </div>
                 </div>
 
                 <div class="form-buttons">
-                  <button  type="button" class="button button--secondary" >Clear</button>
+                  <button v-on:click="clearForm" type="button" class="button button--secondary" >Clear</button>
                   <button type="submit" class="button button--signup button--primary">Save</button>
                 </div>
               </form>
@@ -36,19 +36,9 @@
                 <button class="button button--full-width button--secondary">Load New Ribbets</button>
               </div>
 
-              <div  class="post-list__item">
-                <h3 class="post-list__item__username">$cera</h3>
-                <p class="post-list__item__message">This is a ribbet!</p>
-              </div>
-
-              <div class="post-list__item">
-                <h3 class="post-list__item__username">$cera</h3>
-                <p class="post-list__item__message">This is a ribbet!</p>
-              </div>
-
-              <div class="post-list__item">
-                <h3 class="post-list__item__username">$cera</h3>
-                <p class="post-list__item__message">This is a ribbet!</p>
+              <div v-for="post in posts.items" class="post-list__item">
+                <h3 class="post-list__item__username">{{ post.user.username}}</h3>
+                <p class="post-list__item__message">{{ post.body }}</p>
               </div>
 
             </div>
@@ -63,12 +53,17 @@
 import store from '../store';
 import postResource from '../resources/post';
 const findAll = postResource.actionCreators.findAll;
+const create = postResource.actionCreators.create;
+
 export default {
   name: 'Ribbets-Index',
 
   data() {
     return {
       posts: this.$select('posts'),
+      formValues: {
+        body: '',
+      },
     };
   },
 
@@ -77,7 +72,14 @@ export default {
   },
 
   methods: {
+    clearForm() {
+      this.formValues.body = '';
+    },
 
+    save() {
+      store.dispatch(create(this.formValues));
+      this.clearForm();
+    },
   },
 };
 </script>

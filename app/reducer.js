@@ -4,5 +4,5 @@ import postResource from './resources/post';
 
 export default combineReducers({
   users: userResource.reducer,
-  post: postResource.reducer,
+  posts: postResource.reducer,
 });

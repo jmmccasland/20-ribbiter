@@ -3,8 +3,8 @@
     <div class="container">
 
       <!-- alert error message on failed login -->
-      <div v-if="error" class="card__error">
-        <h2>There was an error logging in</h2>
+      <div v-if="error" class="alert">
+        There was an error logging in. :(
       </div>
 
       <div class="card">
@@ -49,24 +49,24 @@ export default {
   },
 
   methods: {
-    // save() {
-    //   fetch('http://localhost:3333/login', {
-    //     method: 'POST',
-    //     headers: { Accept: 'application/json', Content: 'application/json' },
-    //     body: JSON.stringify(this.formValues)
-    //   }).then((res) => {
-    //     if (res.ok) {
-    //       return res.json();
-    //     }
-    //
-    //     // Still want error handling
-    //     return Promise.reject(res.json);
-    //   }).then((data) => {
-    //     debugger;
-    //   }).catch((err) => {
-    //     this.error = true;
-    //   });
-    // },
+    save() {
+      fetch('http://localhost:3333/login', {
+        method: 'POST',
+        headers: { Accept: 'application/json', Content: 'application/json' },
+        body: JSON.stringify(this.formValues)
+      }).then((res) => {
+        if (res.ok) {
+          return res.json();
+        }
+
+        // Still want error handling
+        return Promise.reject(res.json);
+      }).then((data) => {
+        debugger;
+      }).catch((err) => {
+        this.error = true;
+      });
+    },
   },
 };
 </script>
